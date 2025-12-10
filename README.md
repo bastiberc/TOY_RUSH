@@ -1,7 +1,7 @@
-# Arcane Artifacts (Paintshop)
+# TOY RUSH
 
 
-# Stephanie Maniquiz 
+# BERCASIO, SEBASTIEN JAY M.
 # BSIT 3-1
 
 ---
