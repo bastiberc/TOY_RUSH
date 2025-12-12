@@ -1,72 +1,86 @@
-# TOY RUSH
 
 
-# BERCASIO, SEBASTIEN JAY M.
-# BSIT 3-1
+#Toy Rush
+#BERCASIO, SEBASTIEN JAY M.
+#BSIT 3-1
 
----
-## Tech stack
-- Backend: Laravel (PHP) — routing, controllers, migrations, and APIs
-- Frontend: Vue 3 (Single File Components) with Vite dev tooling
-- Styles: Tailwind CSS (project contains `tailwind.config.js`) plus custom CSS in `resources/css/app.css`
-- Build tools: Node.js, npm (Vite/ESBuild)
-- Dependency manager: Composer (PHP)
-- Tests: PHPUnit (project includes `phpunit.xml`)
+#Tech Stack:
 
--
-## Quick local setup (development)
-Open PowerShell in the repository root (`C:\Users\Stephanie\paintshop`) and run:
-
-1. Install PHP dependencies
-```powershell
-composer install
-```
-
-2. Copy environment file and set app key
-```powershell
-copy .env.example .env
-php artisan key:generate
-```
-
-3. Edit `.env` and set your database credentials (if using a DB). If you don't want DB-backed auctions for now you can skip migrations.
-
-4. Install Node dependencies
-```powershell
-npm install
-```
-
-5. Start the front-end dev server (Vite)
-```powershell
-npm run dev
-```
-This will start the dev server (Vite) and output a local URL (commonly `http://localhost:5173`).
-
-6. Start the Laravel back-end server
-```powershell
-php artisan serve
-```
-This serves the Laravel app at `http://127.0.0.1:8000` by default. If you use the Vite dev server together with Laravel, check how your app is wired (some setups proxy or use full Vite integration).
-
-7. (Optional) Run migrations
-```powershell
-php artisan migrate
-```
-
-Open the app in your browser at the URL shown by your server(s). If both Laravel and Vite are running you may use the Laravel URL (`http://127.0.0.1:8000`) to view the full site.
+* Backend: Laravel (PHP) – used for routing, controllers, migrations, and APIs.
+* Frontend: Vue 3 (Single File Components) with Vite for development tooling.
+* Styling: Tailwind CSS (configured with `tailwind.config.js`) and custom CSS located in `resources/css/app.css`.
+* Build Tools: Node.js and npm (with Vite/ESBuild).
+* Dependency Management: Composer (for PHP dependencies).
+* Testing: PHPUnit (configured with `phpunit.xml`).
 
 ---
 
-## Build for production
-1. Build frontend assets
-```powershell
-npm run build
-```
-2. Clear and cache Laravel config (optional)
-```powershell
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-```
-3. Deploy your `public/` folder and compiled assets to your production server.
+### Quick Setup (Development Environment):
 
+1. **Install PHP Dependencies:**
+
+   ```powershell
+   composer install
+   ```
+
+2. **Copy the Environment File and Generate the App Key:**
+
+   ```powershell
+   copy .env.example .env
+   php artisan key:generate
+   ```
+
+3. **Configure Database Credentials**:
+   Edit the `.env` file to set up your database connection. If you're not using a database-backed auction system, you can skip the migrations.
+
+4. **Install Node Dependencies:**
+
+   ```powershell
+   npm install
+   ```
+
+5. **Start the Frontend Development Server (Vite):**
+
+   ```powershell
+   npm run dev
+   ```
+
+   This will launch the dev server, typically available at `http://localhost:5173`.
+
+6. **Start the Laravel Backend Server:**
+
+   ```powershell
+   php artisan serve
+   ```
+
+   The backend will run on `http://127.0.0.1:8000` by default. If using Vite with Laravel, ensure that your app is configured correctly (sometimes Vite is integrated or proxies requests).
+
+7. **(Optional) Run Migrations:**
+
+   ```powershell
+   php artisan migrate
+   ```
+
+Once the servers are running, open your browser and navigate to the URL shown by your development server (usually `http://127.0.0.1:8000`).
+
+---
+
+### Building for Production:
+
+1. **Build Frontend Assets:**
+
+   ```powershell
+   npm run build
+   ```
+
+2. **Clear and Cache Laravel Configurations (optional):**
+
+   ```powershell
+   php artisan config:cache
+   php artisan route:cache
+   php artisan view:cache
+   ```
+
+3. **Deploy to Production**:
+   Upload the contents of the `public/` folder along with the compiled assets to your production server.
 
